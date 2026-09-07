@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Melliessential — Quality Essentials, Delivered to You</title>
+<meta name="description" content="Melliessential — Imported cloths, traveling boxes, phone accessories, bags, tripods and more. Trusted supplier in Port Harcourt. Order via WhatsApp.">
+<style>
+  :root {
+    --honey: #f5a623;
+    --honey-deep: #d4851a;
+    --honey-light: #ffd57a;
+    --ink: #1a1a2e;
+    --ink-soft: #2d2d4a;
+    --glass-bg: rgba(255, 255, 255, 0.12);
+    --glass-border: rgba(255, 255, 255, 0.28);
+    --glass-shadow: rgba(20, 20, 50, 0.18);
+    --text: #1f1f35;
+    --text-soft: #4a4a6a;
+    --whatsapp: #25d366;
+    --whatsapp-deep: #128c7e;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    color: var(--text);
+    line-height: 1.6;
+    background: linear-gradient(135deg, #fff5e1 0%, #ffe8c5 35%, #ffd9a8 70%, #f5c483 100%);
+    background-attachment: fixed;
+    overflow-x: hidden;
+    min-height: 100vh;
+  }
+
+  .blob {
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.45;
+    z-index: 0;
+    pointer-events: none;
+  }
+  .blob-1 { width: 500px; height: 500px; background: radial-gradient(circle, #ffb84d, transparent 70%); top: -150px; left: -150px; animation: float 18s ease-in-out infinite; }
+  .blob-2 { width: 450px; height: 450px; background: radial-gradient(circle, #ffd97a, transparent 70%); bottom: -100px; right: -100px; animation: float 22s ease-in-out infinite reverse; }
+  .blob-3 { width: 350px; height: 350px; background: radial-gradient(circle, #f59e3d, transparent 70%); top: 40%; left: 60%; animation: float 25s ease-in-out infinite; }
+  @keyframes float {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    33% { transform: translate(60px, -40px) scale(1.1); }
+    66% { transform: translate(-50px, 50px) scale(0.95); }
+  }
+
+  .glass {
+    background: var(--glass-bg);
+    backdrop-filter: blur(24px) saturate(180%);
+    -webkit-backdrop-filter: blur(24px) saturate(180%);
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 8px 32px var(--glass-shadow), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  }
+
+  .container { max-width: 1180px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 2; }
+
+  header { padding: 24px 0; position: sticky; top: 0; z-index: 100; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 14px 24px; border-radius: 100px; }
+  .logo { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 1.15rem; color: var(--ink); }
+  .logo-mini { width: 32px; height: 32px; font-size: 22px; }
+  .nav-cta { background: var(--whatsapp); color: white; padding: 10px 20px; border-radius: 100px; text-decoration: none; font-weight: 600; font-size: 0.92rem; box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4); transition: transform 0.2s, box-shadow 0.2s; }
+  .nav-cta:hover { transform: translateY(-2px); box-shadow: 0 6px 24px rgba(37, 211, 102, 0.5); }
+
+  .hero { padding: 60px 0 80px; text-align: center; }
+  .hero-eyebrow { display: inline-block; background: rgba(255, 255, 255, 0.4); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.5); padding: 8px 18px; border-radius: 100px; font-size: 0.85rem; font-weight: 600; color: var(--honey-deep); margin-bottom: 28px; }
+  .hero-eyebrow .pulse { display: inline-block; width: 8px; height: 8px; background: var(--honey); border-radius: 50%; margin-right: 8px; vertical-align: middle; animation: pulse 2s ease-in-out infinite; }
+  @keyframes pulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.5; transform: scale(1.4); } }
+
+  .hero-title { font-size: clamp(2.4rem, 6vw, 4.2rem); font-weight: 800; line-height: 1.05; color: var(--ink); margin-bottom: 20px; letter-spacing: -0.02em; }
+  .hero-title .accent { background: linear-gradient(135deg, var(--honey), var(--honey-deep)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .hero-sub { font-size: clamp(1.05rem, 2vw, 1.3rem); color: var(--text-soft); max-width: 600px; margin: 0 auto 40px; }
+
+  .bee-stage { margin: 0 auto 40px; width: 280px; height: 280px; perspective: 1000px; position: relative; }
+  .bee-scene { width: 100%; height: 100%; position: relative; transform-style: preserve-3d; animation: beeRotate 14s ease-in-out infinite; }
+  @keyframes beeRotate {
+    0%   { transform: translateY(0) rotate(-6deg); }
+    25%  { transform: translateY(-22px) rotate(8deg); }
+    50%  { transform: translateY(-8px) rotate(-4deg); }
+    75%  { transform: translateY(-26px) rotate(10deg); }
+    100% { transform: translateY(0) rotate(-6deg); }
+  }
+
+  .bee { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-size: 180px; filter: drop-shadow(0 20px 40px rgba(212, 133, 26, 0.4)); transform-style: preserve-3d; animation: beeFloat 4s ease-in-out infinite; }
+  @keyframes beeFloat { 0%, 100% { transform: translateZ(0) scale(1); } 50% { transform: translateZ(30px) scale(1.04); } }
+
+  .bee-shadow { position: absolute; bottom: 18px; left: 50%; transform: translateX(-50%); width: 130px; height: 18px; background: radial-gradient(ellipse, rgba(60, 30, 0, 0.25), transparent 70%); border-radius: 50%; animation: shadowPulse 4s ease-in-out infinite; }
+  @keyframes shadowPulse { 0%, 100% { transform: translateX(-50%) scaleX(1); opacity: 0.6; } 50% { transform: translateX(-50%) scaleX(0.7); opacity: 0.3; } }
+
+  .sparkle { position: absolute; width: 8px; height: 8px; background: var(--honey-light); border-radius: 50%; box-shadow: 0 0 12px var(--honey-light); animation: sparkle 3s ease-in-out infinite; }
+  .sparkle:nth-child(1) { top: 20%; left: 15%; animation-delay: 0s; }
+  .sparkle:nth-child(2) { top: 30%; right: 18%; animation-delay: 0.8s; }
+  .sparkle:nth-child(3) { bottom: 25%; left: 20%; animation-delay: 1.6s; }
+  .sparkle:nth-child(4) { top: 50%; right: 10%; animation-delay: 2.2s; }
+  @keyframes sparkle { 0%, 100% { opacity: 0; transform: scale(0); } 50% { opacity: 1; transform: scale(1); } }
+
+  .hero-ctas { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+  .btn-primary { background: var(--whatsapp); color: white; padding: 18px 36px; border-radius: 100px; text-decoration: none; font-weight: 700; font-size: 1.05rem; display: inline-flex; align-items: center; gap: 10px; box-shadow: 0 8px 28px rgba(37, 211, 102, 0.4); transition: transform 0.25s, box-shadow 0.25s; }
+  .btn-primary:hover { transform: translateY(-3px) scale(1.02); box-shadow: 0 12px 36px rgba(37, 211, 102, 0.5); }
+  .btn-secondary { background: rgba(255, 255, 255, 0.5); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.6); color: var(--ink); padding: 18px 32px; border-radius: 100px; text-decoration: none; font-weight: 600; font-size: 1.05rem; transition: transform 0.25s, background 0.25s; }
+  .btn-secondary:hover { transform: translateY(-3px); background: rgba(255, 255, 255, 0.7); }
+
+  section { padding: 60px 0; position: relative; }
+  .section-eyebrow { text-align: center; color: var(--honey-deep); font-weight: 700; font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 12px; }
+  .section-title { text-align: center; font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 800; color: var(--ink); margin-bottom: 14px; letter-spacing: -0.01em; }
+  .section-sub { text-align: center; color: var(--text-soft); max-width: 560px; margin: 0 auto 48px; font-size: 1.05rem; }
+
+  .products { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 22px; }
+  .product-card { border-radius: 24px; padding: 32px 24px; text-align: center; transition: transform 0.3s, box-shadow 0.3s; cursor: default; }
+  .product-card:hover { transform: translateY(-6px); box-shadow: 0 16px 48px rgba(212, 133, 26, 0.22); }
+  .product-icon { width: 72px; height: 72px; margin: 0 auto 18px; background: linear-gradient(135deg, var(--honey-light), var(--honey)); border-radius: 20px; display: flex; align-items: center; justify-content: center; font-size: 36px; box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), 0 6px 16px rgba(212, 133, 26, 0.3); transform: rotate(-6deg); transition: transform 0.3s; }
+  .product-card:hover .product-icon { transform: rotate(6deg) scale(1.08); }
+  .product-name { font-weight: 700; font-size: 1.1rem; color: var(--ink); margin-bottom: 6px; }
+  .product-desc { font-size: 0.92rem; color: var(--text-soft); }
+
+  .why { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+  .why-card { border-radius: 24px; padding: 28px; text-align: left; }
+  .why-icon { width: 52px; height: 52px; border-radius: 14px; background: linear-gradient(135deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.2)); display: flex; align-items: center; justify-content: center; font-size: 26px; margin-bottom: 16px; border: 1px solid rgba(255, 255, 255, 0.5); }
+  .why-title { font-weight: 700; font-size: 1.05rem; color: var(--ink); margin-bottom: 6px; }
+  .why-desc { font-size: 0.92rem; color: var(--text-soft); line-height: 1.5; }
+
+  .order { border-radius: 32px; padding: 56px 40px; text-align: center; max-width: 720px; margin: 0 auto; }
+  .order h2 { font-size: clamp(1.8rem, 4vw, 2.4rem); font-weight: 800; color: var(--ink); margin-bottom: 14px; }
+  .order p { color: var(--text-soft); margin-bottom: 32px; font-size: 1.05rem; }
+  .order-cta { display: inline-flex; align-items: center; gap: 12px; background: var(--whatsapp); color: white; padding: 20px 40px; border-radius: 100px; text-decoration: none; font-weight: 700; font-size: 1.15rem; box-shadow: 0 10px 32px rgba(37, 211, 102, 0.45); transition: transform 0.25s, box-shadow 0.25s; }
+  .order-cta:hover { transform: translateY(-4px) scale(1.03); box-shadow: 0 14px 40px rgba(37, 211, 102, 0.55); }
+  .order-hours { margin-top: 24px; display: inline-flex; align-items: center; gap: 8px; background: rgba(255, 255, 255, 0.4); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.5); padding: 10px 20px; border-radius: 100px; font-size: 0.92rem; color: var(--ink-soft); font-weight: 600; }
+  .live-dot { width: 8px; height: 8px; background: var(--whatsapp); border-radius: 50%; box-shadow: 0 0 8px var(--whatsapp); animation: pulse 2s ease-in-out infinite; }
+
+  .location { text-align: center; }
+  .location-card { border-radius: 28px; padding: 40px; max-width: 580px; margin: 0 auto; }
+  .location-icon { font-size: 48px; margin-bottom: 16px; }
+  .location-name { font-weight: 700; font-size: 1.3rem; color: var(--ink); margin-bottom: 6px; }
+  .location-sub { color: var(--text-soft); }
+
+  footer { padding: 40px 0; text-align: center; position: relative; z-index: 2; }
+  .footer-card { border-radius: 24px; padding: 32px; }
+  .footer-logo { font-size: 32px; margin-bottom: 8px; }
+  .footer-name { font-weight: 700; font-size: 1.1rem; color: var(--ink); margin-bottom: 4px; }
+  .footer-tag { color: var(--text-soft); font-size: 0.9rem; margin-bottom: 18px; }
+  .footer-link { color: var(--honey-deep); text-decoration: none; font-weight: 600; font-size: 0.95rem; }
+  .footer-link:hover { text-decoration: underline; }
+  .footer-copy { margin-top: 20px; font-size: 0.82rem; color: var(--text-soft); opacity: 0.7; }
+
+  .floating-wa { position: fixed; bottom: 24px; right: 24px; width: 60px; height: 60px; background: var(--whatsapp); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; font-size: 30px; box-shadow: 0 8px 28px rgba(37, 211, 102, 0.5); z-index: 99; animation: bounce 2.5s ease-in-out infinite; }
+  @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+  .floating-wa:hover { animation-play-state: paused; transform: scale(1.1); }
+
+  @media (max-width: 640px) {
+    .hero { padding: 40px 0 60px; }
+    .bee-stage { width: 220px; height: 220px; }
+    .bee { font-size: 140px; }
+    .order { padding: 40px 24px; }
+    .product-card, .why-card { padding: 24px 20px; }
+    .nav-cta { display: none; }
+  }
+
+  .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
+  .reveal.in { opacity: 1; transform: translateY(0); }
+</style>
+</head>
+<body>
+
+<div class="blob blob-1"></div>
+<div class="blob blob-2"></div>
+<div class="blob blob-3"></div>
+
+<header>
+  <div class="container">
+    <nav class="nav glass">
+      <div class="logo">
+        <span class="logo-mini">🐝</span>
+        <span>Melliessential</span>
+      </div>
+      <a href="https://wa.me/2348147221382?text=Hi%20Melliessential%2C%20I%27d%20like%20to%20place%20an%20order" class="nav-cta" target="_blank" rel="noopener">Order Now</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-eyebrow"><span class="pulse"></span>Active Monday – Friday</div>
+
+    <div class="bee-stage">
+      <div class="bee-scene">
+        <div class="bee">🐝</div>
+        <span class="sparkle"></span>
+        <span class="sparkle"></span>
+        <span class="sparkle"></span>
+        <span class="sparkle"></span>
+      </div>
+      <div class="bee-shadow"></div>
+    </div>
+
+    <h1 class="hero-title">Quality essentials, <br><span class="accent">delivered to you.</span></h1>
+    <p class="hero-sub">Imported cloths, traveling boxes, phone accessories and more — trusted, friendly service right here in Port Harcourt.</p>
+
+    <div class="hero-ctas">
+      <a href="https://wa.me/2348147221382?text=Hi%20Melliessential%2C%20I%27d%20like%20to%20place%20an%20order" class="btn-primary" target="_blank" rel="noopener">
+        💬 Order on WhatsApp
+      </a>
+      <a href="#products" class="btn-secondary">See what we offer</a>
+    </div>
+  </div>
+</section>
+
+<section id="products">
+  <div class="container">
+    <div class="section-eyebrow reveal">What we offer</div>
+    <h2 class="section-title reveal">Everything essential, in one place</h2>
+    <p class="section-sub reveal">Carefully sourced imports, ready when you need them. Just send a WhatsApp to order.</p>
+
+    <div class="products">
+      <div class="product-card glass reveal">
+        <div class="product-icon">👗</div>
+        <div class="product-name">Cloths</div>
+        <div class="product-desc">Quality imported fabrics and ready-to-wear pieces.</div>
+      </div>
+      <div class="product-card glass reveal">
+        <div class="product-icon">🧳</div>
+        <div class="product-name">Traveling Boxes</div>
+        <div class="product-desc">Durable travel luggage and storage solutions.</div>
+      </div>
+      <div class="product-card glass reveal">
+        <div class="product-icon">📱</div>
+        <div class="product-name">Phone Accessories</div>
+        <div class="product-desc">Cases, holders, screen protectors, and more.</div>
+      </div>
+      <div class="product-card glass reveal">
+        <div class="product-icon">🔌</div>
+        <div class="product-name">Chargers</div>
+        <div class="product-desc">Fast, reliable charging for every device.</div>
+      </div>
+      <div class="product-card glass reveal">
+        <div class="product-icon">🎧</div>
+        <div class="product-name">Ear Pods</div>
+        <div class="product-desc">Wireless audio that sounds as good as it looks.</div>
+      </div>
+      <div class="product-card glass reveal">
+        <div class="product-icon">👜</div>
+        <div class="product-name">Bags &amp; Tripods</div>
+        <div class="product-desc">Stylish bags plus sturdy tripods for content creators.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-eyebrow reveal">Why Melliessential</div>
+    <h2 class="section-title reveal">Friendly, fast, and trusted</h2>
+    <p class="section-sub reveal">Order with confidence. We're here to make it easy.</p>
+
+    <div class="why">
+      <div class="why-card glass reveal">
+        <div class="why-icon">🤝</div>
+        <div class="why-title">Trusted Service</div>
+        <div class="why-desc">Customers come back because we deliver exactly what we promise — every time.</div>
+      </div>
+      <div class="why-card glass reveal">
+        <div class="why-icon">⚡</div>
+        <div class="why-title">Quick Response</div>
+        <div class="why-desc">Active Monday to Friday, ready to take your order and answer questions fast.</div>
+      </div>
+      <div class="why-card glass reveal">
+        <div class="why-icon">📦</div>
+        <div class="why-title">Quality Imports</div>
+        <div class="why-desc">Sourced carefully so you get the good stuff, not the cheap knock-offs.</div>
+      </div>
+      <div class="why-card glass reveal">
+        <div class="why-icon">💬</div>
+        <div class="why-title">Order via WhatsApp</div>
+        <div class="why-desc">No long forms. Just a quick chat, your order is placed. Simple.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="order glass reveal">
+      <h2>Ready to order?</h2>
+      <p>Send a quick message on WhatsApp and we'll take it from there. Friendly service guaranteed.</p>
+      <a href="https://wa.me/2348147221382?text=Hi%20Melliessential%2C%20I%27d%20like%20to%20place%20an%20order" class="order-cta" target="_blank" rel="noopener">
+        💬 Chat on WhatsApp
+      </a>
+      <div class="order-hours">
+        <span class="live-dot"></span> Active Monday – Friday
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container location">
+    <div class="section-eyebrow reveal">Where to find us</div>
+    <div class="location-card glass reveal">
+      <div class="location-icon">📍</div>
+      <div class="location-name">Port Harcourt, Nigeria</div>
+      <div class="location-sub">Serving customers across the city and beyond</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-card glass">
+      <div class="footer-logo">🐝</div>
+      <div class="footer-name">Melliessential</div>
+      <div class="footer-tag">Quality essentials, delivered to you.</div>
+      <a href="https://wa.me/2348147221382?text=Hi%20Melliessential%2C%20I%27d%20like%20to%20place%20an%20order" class="footer-link" target="_blank" rel="noopener">+234 814 722 1382</a>
+      <div class="footer-copy">© 2026 Melliessential. All rights reserved.</div>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/2348147221382?text=Hi%20Melliessential%2C%20I%27d%20like%20to%20place%20an%20order" class="floating-wa" target="_blank" rel="noopener" aria-label="Order on WhatsApp">💬</a>
+
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  reveals.forEach(r => io.observe(r));
+</script>
+
+</body>
+</html>
